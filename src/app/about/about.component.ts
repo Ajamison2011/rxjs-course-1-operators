@@ -13,6 +13,9 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const http$ = createHttpObservable('/api/courses');
+    const sub = http$.subscribe(console.log);
+    setTimeout(() => sub.unsubscribe(), 0);
   
     
   }
