@@ -14,7 +14,9 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
 
-    const source1$ = interval(1000);
+    const source1$ = of(1,2,3);
+    //const source1$ = interval(1000);
+    
 
     const source2$ = of(4,5,6);
 
